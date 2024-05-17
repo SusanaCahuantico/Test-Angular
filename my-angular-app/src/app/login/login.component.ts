@@ -28,10 +28,16 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     const { username, password } = this.loginForm.value;
 
-    if (username === 'test01' && password === 'test01') {
-      this.router.navigate(['/tasks']);
+    if (this.loginForm.valid) {
+      if (username === 'test01' && password === 'test01') {
+        console.log('TEST');
+        this.router.navigate(['/tasks']);
+      } else {
+        alert('Usuario o contraseña incorrectos');
+      }
     } else {
-      alert('Usuario o contraseña incorrectos');
+      alert('Por favor, complete los campos obligatorios del formulario.');
     }
+  
   }
 }
