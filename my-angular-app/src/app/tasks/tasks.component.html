@@ -1,12 +1,12 @@
 <div class="container mt-5">
   <h2>Lista de Tareas:</h2>  
-    <div class="form-group mb-3">
-      <input type="text" class="form-control" placeholder="Agregar tarea...">
-      <button type="button" class="btn btn-primary my-3">Agregar</button>
-    </div>
-  
+  <div class="form-group mb-3">
+    <input type="text" id="newTask" class="form-control" placeholder="Agregar tarea...">
+    <button type="button" class="btn btn-primary my-3" (click)="addTask()">Agregar</button>
+  </div>
+
     <div class="card p-5">
-      <ul class="list-group list-group-flush mt-3">
+      <ul class="list-group list-group-flush mt-3" id="taskList">
         <li class="list-group-item my-2">
           <input type="checkbox">
           <span> Tarea 1 </span>
