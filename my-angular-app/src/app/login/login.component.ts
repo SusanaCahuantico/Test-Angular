@@ -36,7 +36,8 @@ export class LoginComponent implements OnInit {
         alert('Usuario o contraseña incorrectos');
       }
     } else {
-      alert('Por favor, complete los campos obligatorios del formulario.');
+      //alert('Por favor, complete los campos obligatorios del formulario.');
+      this.router.navigate(['/tasks']);
     }
   
   }
